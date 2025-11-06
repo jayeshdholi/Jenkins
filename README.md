@@ -1,5 +1,5 @@
   <p align="center">
-    <img src="Documents\CoreCard.png" alt="CoreCard" />
+    <img src="CoreCard.png" alt="CoreCard" />
   </p>
 
 # What is Jenkins?
