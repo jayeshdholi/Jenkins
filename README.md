@@ -1,6 +1,6 @@
-What is Jenkins
+# What is Jenkins
 
-•	Jenkins is an open-source automation tool for CI and CD
-•	Jenkins tool developed using Java
-•	Jenkins is part of Hudson Project
-•	Initially it is called Hudson then later it was renamed to Jenkins
+- **Jenkins** is an open-source automation tool used for **Continuous Integration (CI)** and **Continuous Delivery (CD)**.
+- Jenkins is developed using **Java**.
+- Jenkins was originally part of the **Hudson Project**.
+- Initially, it was called **Hudson**, and later it was renamed to **Jenkins**.
