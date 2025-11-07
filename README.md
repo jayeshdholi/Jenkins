@@ -32,9 +32,9 @@
 
 Note: All the above build and deployment tasks can be automated using Jenkins tool.
 
-# Jenkins Installation Guide
+# Jenkins Installation-
 
-This document provides step-by-step instructions to install **Jenkins** on Linux (Rocky/Ubuntu) or Windows systems for Continuous Integration (CI) and Continuous Delivery (CD) setup.
+step-by-step instructions to install **Jenkins** on Linux (Rocky/Ubuntu) or Windows systems for Continuous Integration (CI) and Continuous Delivery (CD) setup.
 
 ---
 
