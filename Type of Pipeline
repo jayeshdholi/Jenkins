@@ -1,4 +1,4 @@
-# Declarative Pipeline (most common)
+# 1.Declarative Pipeline (most common)
 🔹 Syntax: Simplified and structured (uses pipeline { } block)
 🔹 File: Usually defined in Jenkinsfile
 🔹 Purpose: Recommended for most use cases — easier to read, maintain, and validate.
@@ -25,4 +25,39 @@ pipeline {
 }
 
 ✅ Best for: Teams that want readability, structure, and built-in error handling.
+
+# 2. Scripted Pipeline
+
+🔹 Syntax: Pure Groovy code (more flexible, but complex)
+🔹 File: Also defined in a Jenkinsfile
+🔹 Purpose: Used for advanced logic and dynamic pipeline behaviors.
+
+node {
+    stage('Build') {
+        echo 'Building...'
+    }
+    stage('Test') {
+        echo 'Testing...'
+    }
+    stage('Deploy') {
+        echo 'Deploying...'
+    }
+}
+
+✅ Best for: Complex CI/CD logic, loops, conditionals, and custom Groovy scripting.
+
+# 3. Multibranch Pipeline
+
+🔹 Concept: Automatically creates pipelines for each branch or PR in a source control repo (GitHub, Bitbucket, etc.)
+🔹 Each branch has its own Jenkinsfile
+🔹 Jenkins automatically discovers and builds branches.
+
+✅ Best for: Repos with multiple branches (e.g., dev, staging, main) that all use CI/CD.
+
+# Bonus Types (Less Common)
+
+Pipeline with Shared Libraries → Reusable pipeline code across multiple projects.
+
+Blue Ocean Pipeline → Visual representation of declarative pipelines (UI plugin).
+
 
