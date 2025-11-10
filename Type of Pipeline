@@ -1,0 +1,28 @@
+# Declarative Pipeline (most common)
+🔹 Syntax: Simplified and structured (uses pipeline { } block)
+🔹 File: Usually defined in Jenkinsfile
+🔹 Purpose: Recommended for most use cases — easier to read, maintain, and validate.
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
+
+✅ Best for: Teams that want readability, structure, and built-in error handling.
+
