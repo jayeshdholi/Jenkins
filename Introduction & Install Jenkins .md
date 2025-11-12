@@ -159,6 +159,8 @@ After installation, Jenkins asks for an **Administrator password**.
 
 Copy and paste the password into the web UI to proceed.
 
+<img width="1054" height="606" alt="image" src="https://github.com/user-attachments/assets/4058b88f-0bd8-4bba-a902-20ae374723b0" />
+
 ---
 
 # 5. Customize Jenkins Setup
@@ -166,7 +168,7 @@ Copy and paste the password into the web UI to proceed.
 1. Choose **“Install suggested plugins”** during setup.
 2. Create your **first admin user**.
 3. Set Jenkins URL (default: `http://<your-server-ip>:8080`).
-<img width="1054" height="606" alt="image" src="https://github.com/user-attachments/assets/4058b88f-0bd8-4bba-a902-20ae374723b0" />
+
 
 ---
 
