@@ -1,69 +1,84 @@
-﻿  <p align="center">
-    <img src="document\CoreCard.png" alt="CoreCard" />
-  </p>
+Jenkins Job with GitHub Repo + Maven – Integration
+<p align="center"> <img src="CoreCard.png" alt="CoreCard" /> </p>
+Pre-requisites
 
-# Jenkins Job with GIT Hub Repo + Maven – Integration
+Java
 
-Pre-Requisites: Java, Maven and Git client
+Maven
 
-# Git installation In EC2 VM
+Git client
 
-$ sudo apt install git -y
+Git Installation in EC2 VM
+sudo apt install git -y
 
-==================================
-Maven Installation in Jenkins: 
-==================================
+Maven Installation in Jenkins
 
-Jenkins Dashboard -> Manage Jenkins --> Global Tools Configuration -> Add maven
+Jenkins Dashboard → Manage Jenkins → Global Tool Configuration → Add Maven
 
-==================================
-Sample Git Repo URLS For Practice
-==================================
+Sample Git Repo URL for Practice
 
-Git Hub Repo URL  : https://github.com/ashokitschool/maven-web-app.git
+GitHub Repo:
 
+https://github.com/ashokitschool/maven-web-app.git
 
----
+JOB-2: Steps to Create Jenkins Job Using Git Repo + Maven
+1. Connect to the EC2 instance
 
+Where Jenkins server is installed.
 
+2. Start Jenkins Server
 
+Make sure the Jenkins service is running.
 
+3. Access Jenkins Dashboard
 
+Open the Jenkins UI and log in using your credentials.
 
+4. Create Jenkins Job with GitHub Repository
 
-============================================================
-JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
-============================================================
+Go to New Item
 
-1) Connect to EC2 instance in which jenkins server got installed
+Enter Job Name
 
-2) Start Jenkins Server
+Select Freestyle Project → Click OK
 
-3) Access Jenkins Server Dashboard and Login with your jenkins credentials
+Add a description (optional)
 
-4) Create Jenkins Job with Git Hub Repo 
+Go to Source Code Management
 
-		-> New Item
-		-> Enter Item Name (Job Name)
-		-> Select 'Free Style Project' & Click OK
-		-> Enter some description
-		-> Go to "Source Code Management" Tab and Select "Git"
-		-> Enter Project "Git Repo URL"
-		-> Go to "Build tab"
-		-> Click on Add Build Step and Select 'Invoke Top Level Maven Targets'
-		-> Select Maven and enter goals 'clean package'
-		-> Click on Apply and Save
+Select Git
 
-Note: With above steps we have created JENKINS Job
+Enter your Git Repository URL
 
-5) Click on 'Build Now' to start Job execution
+Go to Build tab
 
-6) Click on 'Build Number' and then click on 'Console Output' to see job execution details.
+Click Add Build Step
 
-=> Jenkins Home Directory in EC2 : /var/lib/jenkins/workspace/
+Select Invoke Top-Level Maven Targets
 
-=> Go to Jenkins workspace and then go to job folder then goto target folder there we see war file created.* **Administrator/root privileges**
+Select your Maven installation
 
----
+Enter Goals:
+
+clean package
 
 
+Click Apply and Save
+
+✔ With these steps, your first Jenkins Maven Job is ready.
+
+5. Run the Job
+
+Click Build Now to start execution.
+
+6. View Job Logs
+
+Click the Build Number
+
+Click Console Output to see detailed logs.
+
+Jenkins Workspace Path (EC2 Linux)
+/var/lib/jenkins/workspace/
+
+
+Inside your job folder → target/ → you will find the generated .war file.
