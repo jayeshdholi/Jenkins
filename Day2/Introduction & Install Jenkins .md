@@ -1,84 +1,78 @@
-Jenkins Job with GitHub Repo + Maven – Integration
-<p align="center"> <img src="CoreCard.png" alt="CoreCard" /> </p>
-Pre-requisites
+<p align="center">
+    <img src="CoreCard.png" alt="CoreCard" />
+</p>
 
-Java
+# Jenkins Job with GitHub Repo + Maven – Integration
 
-Maven
+## Pre-Requisites
+- Java
+- Maven
+- Git client
 
-Git client
+---
 
-Git Installation in EC2 VM
+# Git Installation in EC2 VM
+
+```bash
 sudo apt install git -y
-
 Maven Installation in Jenkins
+Go to Jenkins Dashboard
 
-Jenkins Dashboard → Manage Jenkins → Global Tool Configuration → Add Maven
+Navigate to Manage Jenkins
+
+Open Global Tools Configuration
+
+Click Add Maven
+
+Provide a name and Maven home (if needed)
+
+Save the configuration
 
 Sample Git Repo URL for Practice
-
 GitHub Repo:
-
 https://github.com/ashokitschool/maven-web-app.git
 
-JOB-2: Steps to Create Jenkins Job Using Git Repo + Maven
-1. Connect to the EC2 instance
+JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
+Connect to the EC2 instance where Jenkins is installed.
 
-Where Jenkins server is installed.
+Start Jenkins Server.
 
-2. Start Jenkins Server
+Access Jenkins Dashboard and log in with your credentials.
 
-Make sure the Jenkins service is running.
+Create Jenkins Job with GitHub Repository:
 
-3. Access Jenkins Dashboard
+Click New Item
 
-Open the Jenkins UI and log in using your credentials.
-
-4. Create Jenkins Job with GitHub Repository
-
-Go to New Item
-
-Enter Job Name
+Enter Item Name (Job Name)
 
 Select Freestyle Project → Click OK
 
 Add a description (optional)
 
-Go to Source Code Management
-
-Select Git
+Go to Source Code Management → Select Git
 
 Enter your Git Repository URL
 
 Go to Build tab
 
-Click Add Build Step
+Click Add Build Step → Select Invoke top-level Maven targets
 
-Select Invoke Top-Level Maven Targets
+Select Maven installation
 
-Select your Maven installation
+Enter Maven goals:
 
-Enter Goals:
-
+go
+Copy code
 clean package
+Click Apply → Save
 
-
-Click Apply and Save
-
-✔ With these steps, your first Jenkins Maven Job is ready.
-
-5. Run the Job
-
+Running the Job
 Click Build Now to start execution.
 
-6. View Job Logs
+Click the Build Number → Console Output to view logs.
 
-Click the Build Number
-
-Click Console Output to see detailed logs.
-
-Jenkins Workspace Path (EC2 Linux)
+Jenkins Workspace Directory (EC2)
+swift
+Copy code
 /var/lib/jenkins/workspace/
-
-
-Inside your job folder → target/ → you will find the generated .war file.
+Navigate to your job folder → target folder → find the generated .war file.
