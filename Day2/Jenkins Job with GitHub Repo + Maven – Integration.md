@@ -28,7 +28,7 @@ Provide a name and Maven home (if needed)
 
 Save the configuration
 
-<img width="1743" height="923" alt="image" src="https://github.com/user-attachments/assets/bccd1327-c067-4dbf-b27a-334fb5183728" />
+https://github.com/jayeshdholi/Jenkins/edit/main/Day2/image.png
 
 
 
