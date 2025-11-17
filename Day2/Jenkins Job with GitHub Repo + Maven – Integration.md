@@ -28,7 +28,8 @@ Provide a name and Maven home (if needed)
 
 Save the configuration
 
-<img src="https://github.com/user-attachments/assets/da250cb4-899f-435b-b0b3-091539f0c58c" width="800" />
+<img width="1743" height="923" alt="image" src="https://github.com/user-attachments/assets/bccd1327-c067-4dbf-b27a-334fb5183728" />
+
 
 
 
