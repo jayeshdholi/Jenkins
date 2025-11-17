@@ -111,7 +111,7 @@
 
   <header>
     <h1>🚀 Corecard Demo Site</h1>
-    <p>Upgrade your career with our industry-ready training programs</p>
+    <p>corecard</p>
   </header>
 
   <div class="container">
@@ -154,3 +154,4 @@
 
 </body>
 </html>
+
