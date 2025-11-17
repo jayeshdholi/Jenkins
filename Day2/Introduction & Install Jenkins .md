@@ -11,7 +11,7 @@
 
 ---
 
-# Git Installation in EC2 VM
+# Git Installation in VM
 
 ```bash
 sudo apt install git -y
@@ -28,9 +28,12 @@ Provide a name and Maven home (if needed)
 
 Save the configuration
 
+<img width="1743" height="923" alt="image" src="https://github.com/user-attachments/assets/c950fcc4-aa20-4b78-a5e7-9019cde1e887" />
+
+
 Sample Git Repo URL for Practice
 GitHub Repo:
-https://github.com/ashokitschool/maven-web-app.git
+https://github.com/jayeshdholi/Jenkins/tree/main/maven-web-app.git
 
 JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
 Connect to the EC2 instance where Jenkins is installed.
@@ -76,3 +79,4 @@ swift
 Copy code
 /var/lib/jenkins/workspace/
 Navigate to your job folder → target folder → find the generated .war file.
+
