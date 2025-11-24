@@ -91,11 +91,17 @@ sudo nano /opt/tomcat/conf/tomcat-users.xml
 
 **Add below code:**
 <role rolename="manager-gui"/>
-<role rolename="admin-gui"/>
-<user username="admin" password="admin123" roles="manager-gui,admin-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-status"/>
+<role rolename="manager-jmx"/>
+
+<user username="admin" password="admin123"
+roles="manager-gui,manager-script,manager-status"/>
+
 
 **Restart Tomcat:**
 sudo systemctl restart tomcat
+
 
 
 
