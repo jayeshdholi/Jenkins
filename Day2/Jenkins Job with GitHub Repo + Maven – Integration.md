@@ -15,6 +15,11 @@
 
 ```bash
 sudo apt install git -y
+
+---
+# Maven Installation
+
+```bash
 Maven Installation in Jenkins
 Go to Jenkins Dashboard
 
