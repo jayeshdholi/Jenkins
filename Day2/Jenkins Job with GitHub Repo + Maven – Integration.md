@@ -33,12 +33,12 @@ https://github.com/jayeshdholi/Jenkins/edit/main/Day2/image.png
 
 
 
-Sample Git Repo URL for Practice
+Git Repo URL for Practice
 GitHub Repo:
-https://github.com/jayeshdholi/Jenkins/tree/main/maven-web-app.git
+https://github.com/akashsarma/maven-web-app.git
 
 JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
-Connect to the EC2 instance where Jenkins is installed.
+Connect to the instance where Jenkins is installed.
 
 Start Jenkins Server.
 
