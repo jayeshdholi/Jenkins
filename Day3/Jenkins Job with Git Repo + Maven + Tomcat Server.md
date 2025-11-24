@@ -44,8 +44,8 @@ sudo chmod -R u+x /opt/tomcat/bin
 
 ## Step 6: Create Systemd Service File
 sudo nano /etc/systemd/system/tomcat.service
-**
-Add this content:**
+
+**Add this content:**
 
 [Unit]
 Description=Apache Tomcat Web Application Container
@@ -96,5 +96,6 @@ sudo nano /opt/tomcat/conf/tomcat-users.xml
 
 **Restart Tomcat:**
 sudo systemctl restart tomcat
+
 
 
