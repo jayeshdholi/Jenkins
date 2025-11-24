@@ -1,69 +1,123 @@
-﻿  <p align="center">
-    <img src="document\CoreCard.png" alt="CoreCard" />
-  </p>
+# Apache Tomcat Installation Guide
 
-# Jenkins Job with GIT Hub Repo + Maven – Integration
-
-Pre-Requisites: Java, Maven and Git client
-
-# Git installation In EC2 VM
-
-$ sudo apt install git -y
-
-==================================
-Maven Installation in Jenkins: 
-==================================
-
-Jenkins Dashboard -> Manage Jenkins --> Global Tools Configuration -> Add maven
-
-==================================
-Sample Git Repo URLS For Practice
-==================================
-
-Git Hub Repo URL  : https://github.com/ashokitschool/maven-web-app.git
-
+This document provides step-by-step instructions to install Apache Tomcat on Linux
+(Rocky / CentOS / Ubuntu).
 
 ---
 
-
-
-
-
-
-
-============================================================
-JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
-============================================================
-
-1) Connect to EC2 instance in which jenkins server got installed
-
-2) Start Jenkins Server
-
-3) Access Jenkins Server Dashboard and Login with your jenkins credentials
-
-4) Create Jenkins Job with Git Hub Repo 
-
-		-> New Item
-		-> Enter Item Name (Job Name)
-		-> Select 'Free Style Project' & Click OK
-		-> Enter some description
-		-> Go to "Source Code Management" Tab and Select "Git"
-		-> Enter Project "Git Repo URL"
-		-> Go to "Build tab"
-		-> Click on Add Build Step and Select 'Invoke Top Level Maven Targets'
-		-> Select Maven and enter goals 'clean package'
-		-> Click on Apply and Save
-
-Note: With above steps we have created JENKINS Job
-
-5) Click on 'Build Now' to start Job execution
-
-6) Click on 'Build Number' and then click on 'Console Output' to see job execution details.
-
-=> Jenkins Home Directory in EC2 : /var/lib/jenkins/workspace/
-
-=> Go to Jenkins workspace and then go to job folder then goto target folder there we see war file created.* **Administrator/root privileges**
+## ✅ Prerequisites
+- Linux server (Rocky / CentOS / Ubuntu)
+- Sudo privileges
+- Internet connection
 
 ---
 
+## 🟦 Step 1: Install Java
 
+Tomcat requires Java to run.
+
+### Rocky / CentOS:
+```bash
+sudo dnf install java-11-openjdk java-11-openjdk-devel -y
+Ubuntu:
+bash
+Copy code
+sudo apt install openjdk-11-jdk -y
+Check Java version:
+
+bash
+Copy code
+java -version
+🟩 Step 2: Create Tomcat User
+bash
+Copy code
+sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+🟧 Step 3: Download Tomcat Package
+Go to Apache's official site and download the latest version.
+
+Example (Tomcat 10):
+
+bash
+Copy code
+cd /tmp
+curl -O https://downloads.apache.org/tomcat/tomcat-10/v10.1.13/bin/apache-tomcat-10.1.13.tar.gz
+🟨 Step 4: Extract Tomcat
+bash
+Copy code
+sudo mkdir /opt/tomcat
+sudo tar -xzvf apache-tomcat-10.1.13.tar.gz -C /opt/tomcat --strip-components=1
+🟪 Step 5: Set Permissions
+bash
+Copy code
+sudo chown -R tomcat:tomcat /opt/tomcat
+sudo chmod -R u+x /opt/tomcat/bin
+🟥 Step 6: Create Systemd Service File
+bash
+Copy code
+sudo nano /etc/systemd/system/tomcat.service
+Add this content:
+
+ini
+Copy code
+[Unit]
+Description=Apache Tomcat Web Application Container
+After=network.target
+
+[Service]
+Type=forking
+User=tomcat
+Group=tomcat
+
+Environment="JAVA_HOME=/usr/lib/jvm/jre"
+Environment="CATALINA_HOME=/opt/tomcat"
+Environment="CATALINA_BASE=/opt/tomcat"
+Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+🔄 Step 7: Reload Daemon & Start Tomcat
+bash
+Copy code
+sudo systemctl daemon-reload
+sudo systemctl start tomcat
+sudo systemctl enable tomcat
+Check status:
+
+bash
+Copy code
+sudo systemctl status tomcat
+🔥 Step 8: Open Firewall Port (8080)
+bash
+Copy code
+sudo firewall-cmd --permanent --add-port=8080/tcp
+sudo firewall-cmd --reload
+🌐 Access Tomcat
+Open the browser:
+
+cpp
+Copy code
+http://<server-ip>:8080
+⭐ Optional: Enable Tomcat Manager GUI
+Edit:
+
+bash
+Copy code
+sudo nano /opt/tomcat/conf/tomcat-users.xml
+Add:
+
+xml
+Copy code
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<user username="admin" password="admin123" roles="manager-gui,admin-gui"/>
+Restart Tomcat:
+
+bash
+Copy code
+sudo systemctl restart tomcat
