@@ -43,28 +43,29 @@ Connect to the instance where Jenkins is installed.
 Start Jenkins Server.
 
 Access Jenkins Dashboard and log in with your credentials.
+---
 
-Create Jenkins Job with GitHub Repository:
+# Create Jenkins Job with GitHub Repository:
 
-Click New Item
+- Click New Item
 
-Enter Item Name (Job Name)
+- Enter Item Name (Job Name)
 
-Select Freestyle Project → Click OK
+- Select Freestyle Project → Click OK
 
-Add a description (optional)
+- Add a description (optional)
 
-Go to Source Code Management → Select Git
+- Go to Source Code Management → Select Git
 
-Enter your Git Repository URL
+- Enter your Git Repository URL
 
-Go to Build tab
+- Go to Build tab
 
-Click Add Build Step → Select Invoke top-level Maven targets
+- Click Add Build Step → Select Invoke top-level Maven targets
 
-Select Maven installation
+- Select Maven installation
 
-Enter Maven goals:
+- Enter Maven goals:
 
 go
 Copy code
@@ -76,7 +77,7 @@ Click Build Now to start execution.
 
 Click the Build Number → Console Output to view logs.
 
-Jenkins Workspace Directory (EC2)
+Jenkins Workspace Directory
 swift
 Copy code
 /var/lib/jenkins/workspace/
