@@ -205,5 +205,43 @@ Copy and paste the password into the web UI to proceed.
   * Email Extension
 
 ---
+Create Admin account
+
+===============================
+Creating First Job in Jenkins 
+===============================
+
+1) Goto Jenkins Dashboard
+
+2) Click on New Item
+
+		-> Enter Item Name (Job Name)
+		-> Select Free Style Project & Click OK
+		-> Enter some description
+		-> Click on 'Build' tab
+		-> Click on 'Add Build Step' and select 'Execute Shell'
+
+3) Enter below shellscript
+
+echo "Hello Guys,"
+touch akash.txt
+echo "Hello Guys, Welcome to Jenkins test page" >> akash.txt
+echo "Done..!!"
+
+4) Apply and Save
+
+Note: With above steps we have created JENKINS Job
+
+5) Click on 'Build Now' to start Job execution
+
+6) Click on 'Build Number' and then click on 'Console Ouput' to see job execution details.
+
+
+=> Jenkins Home Directory in EC2 : /var/lib/jenkins/workspace/
+
+		$ cd /var/lib/jenkins/workspace/
+
+7) Go to Jenkins home directory and check for the job name --> check the file created inside the job
+
 
 📘 **Reference:** [Official Jenkins Installation Guide](https://www.jenkins.io/doc/book/installing/)
