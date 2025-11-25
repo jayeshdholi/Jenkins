@@ -14,21 +14,14 @@ sudo apt install git -y
 
 **2. Maven Installation in Jenkins**
 
-- Go to Jenkins Dashboard
-
-- Navigate to Manage Jenkins
-
-- Open Global Tools Configuration
-
-- Scroll to Maven
-
-- Click Add Maven
-
-- Give a name (example: **Maven-3.9.6**)
-
-- Select Install automatically OR provide MAVEN_HOME
-
-- Click Save
+		-> Go to Jenkins Dashboard
+		-> Navigate to Manage Jenkins
+		-> Open Global Tools Configuration
+		-> Scroll to Maven
+		-> Click Add Maven
+		-> Give a name (example: **Maven-3.9.6**)
+		-> Select Install automatically OR provide MAVEN_HOME
+		-> Click Save
 
 **3. Maven Definition (Simple Explanation)**
 
@@ -67,38 +60,23 @@ https://github.com/akashsarma/maven-web-app.git
 
 **6. Create Jenkins Job (GitHub + Maven) Step-by-step**
 
-- Click New Item
-
-- Enter job name
-
-- Select Freestyle Project → OK
-
-- Add description (optional)
-
-- Configure Git
-
-- Go to Source Code Management
-
-- Select Git
-
-- Enter repository URL:
-https://github.com/akashsarma/maven-web-app.git
-
-- Build Step (Maven Build)
-
-- Go to Build section
-
-- Click Add Build Step
-
-- Select Invoke top-level Maven targets
-
-- Choose your Maven installation
-
-- Enter goals:
-
-- clean package
-
-- Click Apply → Save
+		-> Click New Item
+		-> Enter job name
+		-> Select Freestyle Project → OK
+		-> Add description (optional)
+		-> Configure Git
+		-> Go to Source Code Management
+		-> Select Git
+		-> Enter repository URL:
+		**https://github.com/akashsarma/maven-web-app.git**
+		-> Build Step (Maven Build)
+		-> Go to Build section
+		-> Click Add Build Step
+		-> Select Invoke top-level Maven targets
+		-> Choose your Maven installation
+		-> Enter goals:
+		-> clean package
+		-> Click Apply → Save
 
 **7. Run the Jenkins Job**
 
