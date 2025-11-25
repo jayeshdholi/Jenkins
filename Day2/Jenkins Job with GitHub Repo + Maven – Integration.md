@@ -34,7 +34,7 @@ sudo apt install git -y
 
 Maven is a build automation and dependency management tool for Java applications.
 
-## What Maven Does
+## What Maven Does?
 - Compiles code
 - Runs tests
 - Downloads dependencies automatically
@@ -42,17 +42,17 @@ Maven is a build automation and dependency management tool for Java applications
 - Works perfectly with Jenkins for CI/CD
 
 **Common Maven Commands-**
-
-mvn -v               # Check Maven version
-mvn clean            # Remove old compiled files
-mvn compile          # Compile project
-mvn test             # Run tests
-mvn package          # Create WAR/JAR
-mvn clean package    # Clean + build
+- mvn -v               # Check Maven version
+- mvn clean            # Remove old compiled files
+- mvn compile          # Compile project
+- mvn test             # Run tests
+- mvn package          # Create WAR/JAR
+- mvn clean package    # Clean + build
 
 **4. GitHub Repository for Practice**
 
 **Git Repo URL:**
+
 https://github.com/akashsarma/maven-web-app.git
 
 **5. Jenkins → Maven → Tomcat Workflow (Diagram)**
