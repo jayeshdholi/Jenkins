@@ -68,7 +68,8 @@ https://github.com/akashsarma/maven-web-app.git
 		-> Go to Source Code Management
 		-> Select Git
 		-> Enter repository URL:
-		**https://github.com/akashsarma/maven-web-app.git**
+		https://github.com/akashsarma/maven-web-app.git
+		
 		-> Build Step (Maven Build)
 		-> Go to Build section
 		-> Click Add Build Step
