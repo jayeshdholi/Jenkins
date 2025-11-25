@@ -14,21 +14,21 @@ sudo apt install git -y
 
 **2. Maven Installation in Jenkins**
 
--- Go to Jenkins Dashboard
+- Go to Jenkins Dashboard
 
--- Navigate to Manage Jenkins
+- Navigate to Manage Jenkins
 
--- Open Global Tools Configuration
+- Open Global Tools Configuration
 
--- Scroll to Maven
+- Scroll to Maven
 
--- Click Add Maven
+- Click Add Maven
 
--- Give a name (example: **Maven-3.9.6**)
+- Give a name (example: **Maven-3.9.6**)
 
--- Select Install automatically OR provide MAVEN_HOME
+- Select Install automatically OR provide MAVEN_HOME
 
--- Click Save
+- Click Save
 
 **3. Maven Definition (Simple Explanation)**
 
@@ -43,12 +43,12 @@ Maven is a build automation and dependency management tool for Java applications
 
 **Common Maven Commands**
 
-mvn -v               # Check Maven version
-mvn clean            # Remove old compiled files
-mvn compile          # Compile project
-mvn test             # Run tests
-mvn package          # Create WAR/JAR
-mvn clean package    # Clean + build
+- mvn -v               # Check Maven version
+- mvn clean            # Remove old compiled files
+- mvn compile          # Compile project
+- mvn test             # Run tests
+- mvn package          # Create WAR/JAR
+- mvn clean package    # Clean + build
 
 **4. GitHub Repository for Practice**
 
@@ -67,47 +67,46 @@ https://github.com/akashsarma/maven-web-app.git
 
 **6. Create Jenkins Job (GitHub + Maven) Step-by-step**
 
-Click New Item
+- Click New Item
 
-Enter job name
+- Enter job name
 
-Select Freestyle Project → OK
+- Select Freestyle Project → OK
 
-Add description (optional)
+- Add description (optional)
 
-Configure Git
+- Configure Git
 
-Go to Source Code Management
+- Go to Source Code Management
 
-Select Git
+- Select Git
 
-Enter repository URL:
-
+- Enter repository URL:
 https://github.com/akashsarma/maven-web-app.git
 
-Build Step (Maven Build)
+- Build Step (Maven Build)
 
-Go to Build section
+- Go to Build section
 
-Click Add Build Step
+- Click Add Build Step
 
-Select Invoke top-level Maven targets
+- Select Invoke top-level Maven targets
 
-Choose your Maven installation
+- Choose your Maven installation
 
-Enter goals:
+- Enter goals:
 
-clean package
+- clean package
 
-Click Apply → Save
+- Click Apply → Save
 
 **7. Run the Jenkins Job**
 
-Click Build Now
+- Click Build Now
 
-Click the build number
+- Click the build number
 
-Open Console Output to view logs
+- Open Console Output to view logs
 
 **8. Jenkins Workspace Path**
 /var/lib/jenkins/workspace/
