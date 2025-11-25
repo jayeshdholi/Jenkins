@@ -41,7 +41,7 @@ Maven is a build automation and dependency management tool for Java applications
 - Packages your project (jar or war)
 - Works perfectly with Jenkins for CI/CD
 
-**Common Maven Commands**
+**Common Maven Commands-**
 
 mvn -v               # Check Maven version
 mvn clean            # Remove old compiled files
