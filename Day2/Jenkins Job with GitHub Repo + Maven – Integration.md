@@ -14,21 +14,21 @@ sudo apt install git -y
 
 **2. Maven Installation in Jenkins**
 
-Go to Jenkins Dashboard
+-- Go to Jenkins Dashboard
 
-Navigate to Manage Jenkins
+-- Navigate to Manage Jenkins
 
-Open Global Tools Configuration
+-- Open Global Tools Configuration
 
-Scroll to Maven
+-- Scroll to Maven
 
-Click Add Maven
+-- Click Add Maven
 
-Give a name (example: **Maven-3.9.6**)
+-- Give a name (example: **Maven-3.9.6**)
 
-Select Install automatically OR provide MAVEN_HOME
+-- Select Install automatically OR provide MAVEN_HOME
 
-Click Save
+-- Click Save
 
 **3. Maven Definition (Simple Explanation)**
 
@@ -57,7 +57,7 @@ https://github.com/akashsarma/maven-web-app.git
 
 **5. Jenkins → Maven → Tomcat Workflow (Diagram)**
 
-**flowchart LR**
+**flowchart LR-**
 
     A[Jenkins Job] --> B[Git Checkout]
     B --> C[Maven Build<br/>clean package]
@@ -65,8 +65,7 @@ https://github.com/akashsarma/maven-web-app.git
     D --> E[Deploy to Tomcat<br/>using Deploy Plugin]
     E --> F[Application Running]
 
-**6. Create Jenkins Job (GitHub + Maven)**
-Step-by-step
+**6. Create Jenkins Job (GitHub + Maven) Step-by-step**
 
 Click New Item
 
