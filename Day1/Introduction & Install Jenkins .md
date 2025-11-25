@@ -205,11 +205,10 @@ Copy and paste the password into the web UI to proceed.
   * Email Extension
 
 ---
-Create Admin account
 
-===============================
-Creating First Job in Jenkins 
-===============================
+### Create Admin account
+
+## Creating First Job in Jenkins 
 
 1) Goto Jenkins Dashboard
 
@@ -243,5 +242,6 @@ Note: With above steps we have created JENKINS Job
 
 7) Go to Jenkins home directory and check for the job name --> check the file created inside the job
 
+---
 
 📘 **Reference:** [Official Jenkins Installation Guide](https://www.jenkins.io/doc/book/installing/)
