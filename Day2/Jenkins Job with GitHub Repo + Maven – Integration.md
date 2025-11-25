@@ -1,90 +1,122 @@
-<p align="center">
-    <img src="CoreCard.png" alt="CoreCard" />
-</p>
+Jenkins Job with GitHub Repo + Maven – Complete Guide
+<p align="center"> <img src="CoreCard.png" alt="CoreCard" /> </p>
+Pre-Requisites
 
-# Jenkins Job with GitHub Repo + Maven – Integration
+Java Installed
 
-## Pre-Requisites
-- Java
-- Maven
-- Git client
+Maven Installed
 
----
+Git Client Installed
 
-# Git Installation in VM
+Jenkins Installed & Running
 
-```bash
+1. Git Installation in Linux VM
 sudo apt install git -y
 
----
-# Maven Installation
+2. Maven Installation in Jenkins
 
-```bash
-Maven Installation in Jenkins
 Go to Jenkins Dashboard
 
 Navigate to Manage Jenkins
 
 Open Global Tools Configuration
 
+Scroll to Maven
+
 Click Add Maven
 
-Provide a name and Maven home (if needed)
+Give a name (example: Maven-3.9.6)
 
-Save the configuration
+Select Install automatically OR provide MAVEN_HOME
 
-https://github.com/jayeshdholi/Jenkins/edit/main/Day2/image.png
+Click Save
 
+3. Maven Definition (Simple Explanation)
 
+Maven is a build automation and dependency management tool for Java applications.
 
+✔ What Maven Does
 
-Git Repo URL for Practice
-GitHub Repo:
+Compiles code
+
+Runs tests
+
+Downloads dependencies automatically
+
+Packages your project (jar or war)
+
+Works perfectly with Jenkins for CI/CD
+
+✔ Common Maven Commands
+mvn -v               # Check Maven version
+mvn clean            # Remove old compiled files
+mvn compile          # Compile project
+mvn test             # Run tests
+mvn package          # Create WAR/JAR
+mvn clean package    # Clean + build
+
+4. GitHub Repository for Practice
+
+Git Repo URL:
+
 https://github.com/akashsarma/maven-web-app.git
 
-JOB-2: Steps to Create Jenkins Job with Git Repo + Maven
-Connect to the instance where Jenkins is installed.
+5. Jenkins → Maven → Tomcat Workflow (Diagram)
+flowchart LR
+    A[Jenkins Job] --> B[Git Checkout]
+    B --> C[Maven Build<br/>clean package]
+    C --> D[Generate WAR File]
+    D --> E[Deploy to Tomcat<br/>using Deploy Plugin]
+    E --> F[Application Running]
 
-Start Jenkins Server.
+6. Create Jenkins Job (GitHub + Maven)
+Step-by-step
 
-Access Jenkins Dashboard and log in with your credentials.
----
+Click New Item
 
-**# Create Jenkins Job with GitHub Repository:**
+Enter job name
 
-- Click New Item
+Select Freestyle Project → OK
 
-- Enter Item Name (Job Name)
+Add description (optional)
 
-- Select Freestyle Project → Click OK
+Configure Git
 
-- Add a description (optional)
+Go to Source Code Management
 
-- Go to Source Code Management → Select Git
+Select Git
 
-- Enter your Git Repository URL
+Enter repository URL:
 
-- Go to Build tab
+https://github.com/akashsarma/maven-web-app.git
 
-- Click Add Build Step → Select Invoke top-level Maven targets
+Build Step (Maven Build)
 
-- Select Maven installation
+Go to Build section
 
-- Enter Maven goals:
+Click Add Build Step
 
-go
-Copy code
+Select Invoke top-level Maven targets
+
+Choose your Maven installation
+
+Enter goals:
+
 clean package
+
+
 Click Apply → Save
 
-Running the Job
-Click Build Now to start execution.
+7. Run the Jenkins Job
 
-Click the Build Number → Console Output to view logs.
+Click Build Now
 
-Jenkins Workspace Directory
-swift
-Copy code
+Click the build number
+
+Open Console Output to view logs
+
+8. Jenkins Workspace Path
 /var/lib/jenkins/workspace/
-Navigate to your job folder → target folder → find the generated .war file.
 
+
+Go inside your job → find the target folder → WAR file will be there.
