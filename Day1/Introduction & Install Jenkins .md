@@ -222,10 +222,10 @@ Copy and paste the password into the web UI to proceed.
 
 3) Enter below shellscript
 
-echo "Hello Guys,"
-touch akash.txt
-echo "Hello Guys, Welcome to Jenkins test page" >> akash.txt
-echo "Done..!!"
+		-> echo "Hello Guys,"
+		-> touch ashokit.txt
+		-> echo "Hello Guys, Welcome to Jenkins Classes" >> ashokit.txt
+		-> echo "Done..!!"
 
 4) Apply and Save
 
