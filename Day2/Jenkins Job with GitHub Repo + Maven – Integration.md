@@ -43,12 +43,12 @@ Maven is a build automation and dependency management tool for Java applications
 
 **Common Maven Commands**
 
-- mvn -v               # Check Maven version
-- mvn clean            # Remove old compiled files
-- mvn compile          # Compile project
-- mvn test             # Run tests
-- mvn package          # Create WAR/JAR
-- mvn clean package    # Clean + build
+mvn -v               # Check Maven version
+mvn clean            # Remove old compiled files
+mvn compile          # Compile project
+mvn test             # Run tests
+mvn package          # Create WAR/JAR
+mvn clean package    # Clean + build
 
 **4. GitHub Repository for Practice**
 
