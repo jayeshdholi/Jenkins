@@ -9,9 +9,11 @@
 ### Jenkins Installed & Running
 
 **1. Git Installation in Linux VM**
+
 sudo apt install git -y
 
 **2. Maven Installation in Jenkins**
+
 Go to Jenkins Dashboard
 
 Navigate to Manage Jenkins
