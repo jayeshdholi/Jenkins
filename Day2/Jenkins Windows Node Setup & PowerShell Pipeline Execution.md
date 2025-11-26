@@ -34,6 +34,27 @@ A **Jenkins Node (Agent)** is a machine used by Jenkins to run jobs.
 
 ---
 
+## Jenkins Freestyle vs Pipeline — Key Differences
+
+| Feature                  | **Freestyle Job**                 | **Pipeline Job**                               |
+| ------------------------ | --------------------------------- | ---------------------------------------------- |
+| **Job Definition**       | GUI-based configuration           | Code-based (Jenkinsfile)                       |
+| **Complexity Handling**  | Suitable for simple tasks         | Designed for complex CI/CD workflows           |
+| **Scriptability**        | Limited                           | Full scripting with Groovy                     |
+| **Source Control**       | Cannot store job config in Git    | Jenkinsfile stored in Git (version control)    |
+| **Stages/Steps**         | Basic build steps                 | Advanced stages, parallel, agents, steps       |
+| **Build Restart/Resume** | Cannot resume if Jenkins restarts | Pipelines can resume after restart             |
+| **Parameter Support**    | Basic parameters                  | Advanced parameters + logic                    |
+| **Pipeline as Code**     | ❌ No                              | ✔ Yes (best practice)                          |
+| **Parallel Execution**   | ❌ No                              | ✔ Yes (parallel stages)                        |
+| **Error Handling**       | Very basic                        | try/catch, post blocks, notifications          |
+| **Environment Handling** | Limited                           | Full control over env vars, credentials, tools |
+| **Reusability**          | Hard to reuse                     | Shared libraries, reusable code                |
+| **Credentials Usage**    | GUI-only                          | Secure with `withCredentials`                  |
+| **Approval/Governance**  | Hard to track changes             | Every change in Jenkinsfile is audited in Git  |
+
+---
+
 # 1. Install Java on Windows (Required for Agent)
 
 Download **JDK 17**:  
@@ -66,7 +87,7 @@ Type: Permanent Agent
 Step 3 — Configure Node
 Setting	Value
 Remote Root Directory	D:\Jenkins\Agent
-Labels	windows powershell
+Labels	WIN-NODE-01
 Launch Method	Launch agent via Java Web Start / agent.jar
 
 4. Start the Node Agent on Windows
@@ -88,7 +109,7 @@ windowsPS
 
 6. Basic Pipeline to Run PowerShell on Windows Node
 pipeline {
-    agent { label 'windows' }
+    agent { label 'WIN-NODE-01' }
 
     stages {
         stage('Check Host Info') {
@@ -147,6 +168,8 @@ Each pipeline job gets its own folder.
 
 ---
 
+
 📘 Reference
 Jenkins Official Docs: https://www.jenkins.io/doc/book/
 PowerShell Remoting: https://learn.microsoft.com/en-us/powershell/
+
