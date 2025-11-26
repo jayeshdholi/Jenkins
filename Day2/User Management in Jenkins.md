@@ -63,15 +63,20 @@ Each team member must have their own user account.
 
 To manage permissions effectively, install the plugin:
 
-👉 **Role-Based Authorization Strategy Plugin**
+👉 Role-Based Authorization Strategy Plugin
 
-### Steps:
-Go to:
+Steps:
+
+1. Navigate to:
 
 `Manage Jenkins → Manage Plugins → Available`
 
 
-Install and restart Jenkins.
+2. Search:
+   
+**Role-Based Authorization Strategy**
+
+3. Install and restart Jenkins.
 
 ---
 
