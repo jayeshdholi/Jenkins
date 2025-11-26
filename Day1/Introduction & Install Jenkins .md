@@ -54,7 +54,21 @@ Before starting the installation, ensure you have:
 
 ---
 
-# 2. Check Java Installation
+# 2. Check Java Installation, updated package & disable firewall
+
+Update package:
+
+```bash
+sudo dnf update
+sudp dnf upgrade
+```
+
+Disable firewall:
+
+```bash
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
+```
 
 Verify Java version:
 
@@ -178,11 +192,6 @@ Copy and paste the password into the web UI to proceed.
 
   ```
   http://<your-ip>:8080
-  ```
-* Check Jenkins version:
-
-  ```bash
-  java -jar /usr/lib/jenkins/jenkins.war --version
   ```
 
 ---
