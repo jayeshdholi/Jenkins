@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'LAB-windows-EV' }
+    agent { label 'WIN-NODE-01' }
 
     parameters {
         choice(
             name: 'SERVER',
-            choices: ['PPG-App01', 'PPG-App02'],
+            choices: ['JAYESHD', 'PPG-App02'],
             description: 'Choose server to run script'
         )
     }
