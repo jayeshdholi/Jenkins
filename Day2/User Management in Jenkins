@@ -189,11 +189,11 @@ testing → QA/Testing team
 Each user is mapped to the appropriate role based on responsibility.
 
 8. Summary of Access Control
-Team	Login	Run Job	Create Job	Edit Job	Delete Job
-Development	✔	✔	✘	✘	✘
-Testing	✔	✔	✘	✘	✘
-Operations	✔	✔	✔	✔	✔
-Admin	✔	✔	✔	✔	✔ (plus system config)
+Team	      Login	Run Job	Create Job	Edit Job	    Delete Job
+Development   ✔  	 ✔	        ✘	         ✘	          ✘
+Testing	      ✔	   ✔	        ✘	         ✘	          ✘
+Operations	  ✔	   ✔	        ✔	         ✔	          ✔
+Admin	        ✔  	 ✔	        ✔	         ✔	          ✔ (plus system config)
 9. Best Practices
 ✔ Give minimum permissions necessary
 ✔ Do not share user accounts
