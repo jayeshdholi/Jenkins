@@ -8,6 +8,15 @@ pipeline {
     }
 
     stages {
+
+        stage('Verify Input') {
+            steps {
+                echo "Running script on: ${params.SERVER}"
+                echo "Username: ${params.USERNAME}"
+                // Password intentionally NOT printed
+            }
+        }
+        
         stage('Run Remote PowerShell Script') {
             steps {
                 script {
