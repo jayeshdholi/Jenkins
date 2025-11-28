@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'windosnode1' }
+    agent { label 'WIN-NODE-01' }
 
     parameters {
         choice(name: 'SERVER', choices: ['akashs1', 'PPG-App02'])
