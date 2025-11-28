@@ -95,7 +95,7 @@ Launch Method	Launch agent via Java Web Start / agent.jar
 From Jenkins Node configuration, copy the agent.jar launch command:
 
 Example:
-java -jar agent.jar -jnlpUrl http://<JenkinsIP>:8080/computer/WIN-NODE-01/jenkins-agent.jnlp -secret <secret-key>
+java -jar agent.jar -url http://<JenkinsIP>:8080/ -secret <secret-key> -name <node-name> -webSocket -workDir "D:\Jenkins\Agent" -noCertificateCheck
 Run this on the Windows machine.
 
 If successful → Jenkins shows:
