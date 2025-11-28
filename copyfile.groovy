@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'LAB-windows-EV' }
+    agent { label 'windosnode1' }
 
     parameters {
-        choice(name: 'SERVER', choices: ['PPG-App01', 'PPG-App02'])
+        choice(name: 'SERVER', choices: ['akashs1', 'PPG-App02'])
         string(name: 'USERNAME')
         password(name: 'PASSWORD')
     }
