@@ -58,11 +58,12 @@ A **Jenkins Node (Agent)** is a machine used by Jenkins to run jobs.
 # 1. Install Java on Windows (Required for Agent)
 
 Download **JDK 17**:  
-https://adoptium.net/
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 
 ### Set environment variables:
 
-JAVA_HOME = C:\Program Files\Eclipse Adoptium\jdk-17
+Under System variables
+JAVA_HOME = C:\Program Files\Java\jdk-17\
 PATH = %JAVA_HOME%\bin
 
 ### Verify installation:
