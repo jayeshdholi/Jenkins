@@ -2,7 +2,7 @@ pipeline {
     agent { label 'WIN-NODE-01' }
 
     parameters {
-        choice(name: 'SERVER', choices: ['akashs1', 'PPG-App02'])
+        choice(name: 'SERVER', choices: ['akashs1', 'PPG-App02','JAYESHD'])
         string(name: 'USERNAME')
         password(name: 'PASSWORD')
     }
